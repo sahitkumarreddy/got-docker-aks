@@ -1,0 +1,48 @@
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;
+    width: 50%;
+    vertical-align: top;
+}
+ 
+table{
+    width:100%;
+    table-layout:fixed;
+    border-collapse:collapse;
+    margin: 7vw 1vw 1vw 1vw;
+}
+td{
+    word-wrap: break-word;
+}
+
+
+@media only screen and (max-width: 480px) {
+    table{
+        width:100%;
+        table-layout:fixed;
+        border-collapse:collapse;
+        margin: 20vw 1vw 2vw 0vw;
+    }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 640px) {
+    table{
+        width:100%;
+        table-layout:fixed;
+        border-collapse:collapse;
+        margin: 15vw 1vw 2vw 0vw;
+    }
+}
+
+@media only screen and (min-width: 640px) and (max-width: 959px){
+    table{
+        width:100%;
+        table-layout:fixed;
+        border-collapse:collapse;
+        margin: 11vw 1vw 2vw 0vw;
+    }
+}

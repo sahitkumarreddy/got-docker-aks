@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="alert alert-danger" *ngIf="errorMsg"> {{errorMsg}}</div>
+  <div class="card-group" style="text-align:center" *ngIf="allCharacters.length>0">
+    <div *ngFor="let character of allCharacters" class="col-md-4">
+      <div class="card">
+        <div *ngIf="!character.name;then aliases else name"></div>
+        <ng-template #aliases>
+          <div class="card-header">{{character.aliases[0]}}</div>
+        </ng-template>
+        <ng-template #name>
+          <div class="card-header">{{character.name}}</div>
+        </ng-template>
+        <div class="card-body">
+          <p>Gender:{{character.gender}}</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-primary" (click)="routeTo('characters',character.url)">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

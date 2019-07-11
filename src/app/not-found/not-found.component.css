@@ -1,0 +1,7 @@
+.error-template {padding: 10vw;margin: 5vw;text-align: center;}
+.error-actions {margin-top:20px;margin-bottom:15px;}
+.error-actions .btn { margin-right:10px; }
+
+@media only screen and (max-width: 768px) {
+    .error-template {padding: 20vw;margin: 5vw;text-align: center;}
+}

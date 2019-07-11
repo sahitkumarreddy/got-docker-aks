@@ -1,0 +1,18 @@
+.card{
+    border-radius: 5px;
+    margin: .5em;
+    margin: 5em 1em 1em 1em;
+}
+.card:hover{
+    transform: scale(1.05);
+}
+
+.books{
+    border: 2px solid red;
+}
+.houses{
+    border: 2px solid green;
+}
+.characters{
+    border: 2px solid blue;
+}

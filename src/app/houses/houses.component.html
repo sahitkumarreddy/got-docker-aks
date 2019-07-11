@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="alert alert-danger" *ngIf="errorMsg"> {{errorMsg}}</div>
+  <div class="card-group" style="text-align:center" *ngIf="allHouses.length>0">
+    <div *ngFor="let house of allHouses" class="col-md-4">
+      <div class="card">
+        <div class="card-header">{{house.name}}</div>
+        <div class="card-body">
+          <p>{{house.region}}</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-primary" (click)="routeTo('houses',house.url)">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

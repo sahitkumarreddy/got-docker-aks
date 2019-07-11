@@ -1,0 +1,9 @@
+.card{
+    border-radius: 5px;
+    margin: .5em;
+    border: 2px solid green;
+    margin: 5em 1em 1em 1em;
+}
+.card:hover{
+    transform: scale(1.05);
+}

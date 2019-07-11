@@ -1,0 +1,7 @@
+<div class="alert alert-danger" *ngIf="errorMsg"> {{errorMsg}}</div>
+<table>
+    <tr *ngFor="let item of currentHouse| keyvalue">
+      <th>{{item.key | uppercase}}</th>
+      <td>{{item.value}}</td>
+    </tr>
+</table>

@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="alert alert-danger" *ngIf="errorMsg"> {{errorMsg}}</div>
+  <div class="card-group" style="text-align:center" *ngIf="allBooks">
+    <div *ngFor="let book of allBooks" class="col-md-4">
+      <div class="card books">
+        <div class="card-header">{{book.name}}</div>
+        <div class="card-body">
+          <p *ngIf="book.authors.length!=undefined && book.authors.length>0">
+            Authors:
+            <span *ngFor="let author of book.authors;let first=first;let last=last">{{author}}{{last? " ":", "}}</span>
+          </p>
+          <p>Released on {{book.released |date}}</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-primary" (click)="routeTo('books',book.url)">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div *ngFor="let house of allHouses" class="col-md-4">
+      <div class="card houses">
+        <div class="card-header">{{house.name}}</div>
+        <div class="card-body">
+          <p>{{house.region}}</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-primary" (click)="routeTo('houses',house.url)">Details</a>
+        </div>
+      </div>
+    </div>
+
+    <div *ngFor="let character of allCharacters" class="col-md-4">
+      <div class="card characters">
+        <div *ngIf="!character.name;then aliases else name"></div>
+        <ng-template #aliases>
+          <div class="card-header">{{character.aliases[0]}}</div>
+        </ng-template>
+        <ng-template #name>
+          <div class="card-header">{{character.name}}</div>
+        </ng-template>
+        <div class="card-body">
+          <p>Gender:{{character.gender}}</p>
+        </div>
+        <div class="card-footer">
+          <a class="btn btn-primary" (click)="routeTo('characters',character.url)">Details</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
